@@ -385,8 +385,7 @@ input{
     width: 100%;
     background-color: var(--cor--primária); 
     left: 0;
-    top:0; 
-    background-color: var(--cor--primária);  
+    top:0;  
     border-radius: 25px 25px 0 25px; 
     
 } 
@@ -398,12 +397,12 @@ input{
     bottom: -40px;
     height: 40px;
     width: 40px;
-    background-color: var(--cor--primária);
+    background-color: var(--cor--primária); 
 } 
 .overlay::after{
     border-radius: 0 25px 0 0; 
     background-color:#fff;  
-    border-left: solid 1px transparent;
+    border-left: solid 1px transparent; 
 }
 
 
@@ -511,26 +510,16 @@ input{
     position: absolute;  
     top: -33px;
     left: -70px;
-    transition: opacity 0.5s;
-}
-
-
-#imagem1{
-    z-index: 3;
-
-}
-
-#imagem2{
-    z-index: 2;
+    transition: opacity 0.5s ease; 
     opacity: 0;
+} 
 
+.ativa{
+    opacity: 1;
 }
 
-#imagem3{
-    z-index: 1; 
-    opacity: 0;
 
-}
+
 
 .roleta {
     display: flex; 
@@ -638,3 +627,42 @@ input{
     } 
     
 }
+
+
+@media (max-width: 1400px) {
+
+    .content{
+        width: 650px; 
+        height: 500px; 
+
+    }  
+    .texto{
+        height: 500px; 
+        width: 40%;
+    } 
+    .content{
+        padding-top: 30px;
+    }
+    .duas_partes{
+        flex-direction: row; 
+        align-items: center; 
+        gap: 80px; 
+        padding:20px; 
+        height: 800px; 
+        
+    } 
+    .org{
+        gap: 10px;
+    }
+    .olho_da_empresa{
+        height: 500px;
+    }
+    .parte2{
+       position: relative;  
+       top: -20px;
+    }
+}
+
+
+
+
