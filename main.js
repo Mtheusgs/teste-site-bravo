@@ -73,7 +73,7 @@ var swiper = new Swiper(".slide-content", {
       slidesPerView: 2,
     },
     1200: {
-      slidesPerView: 4,
+      slidesPerView: 3,
     }, 
     1600: {
       slidesPerView: 4,
@@ -84,26 +84,22 @@ var swiper = new Swiper(".slide-content", {
 
 
 function mudarImagem() {
-  var imagem1 = document.getElementById('imagem1');
-  var imagem2 = document.getElementById('imagem2');
-  var imagem3 = document.getElementById('imagem3'); 
-  console.log('abacaxi');
-  
-  // Verifica qual é a imagem superior
-  if (imagem1.style.opacity == '1') {
-    // Se a imagem 1 é a superior, troca com a imagem 2
-    imagem1.style.opacity = '0';
-    imagem2.style.opacity = '1';
-  } else if (imagem2.style.opacity == '1') {
-    // Se a imagem 2 é a superior, troca com a imagem 3
-    imagem2.style.opacity = '0';
-    imagem3.style.opacity = '1';
-  } else {
-    // Se a imagem 3 é a superior, troca com a imagem 1
-    imagem3.style.opacity = '0';
-    imagem1.style.opacity = '1';
+  var imagens = document.querySelectorAll('.slide-img');
+  var imagemAtiva = document.querySelector('.slide-img.ativa');
+  var proximaImagem;
+
+  // Encontra a próxima imagem a ser exibida
+  for (var i = 0; i < imagens.length; i++) {
+    if (imagens[i] === imagemAtiva) {
+      proximaImagem = imagens[(i + 1) % imagens.length];
+      break;
+    }
   }
-};
+
+  // Remove a classe ativa da imagem atual e adiciona à próxima imagem
+  imagemAtiva.classList.remove('ativa');
+  proximaImagem.classList.add('ativa');
+}
 
 
 function trocarTexto() { 
