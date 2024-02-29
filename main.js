@@ -1,42 +1,36 @@
-  var textos = [
-    "Fornecer a melhor experiência de usuário a seus clientes ultilizando  hardware, software e serviços inovadores.",
-    "Acreditamos que estamos na face da terra para fazer ótimos produtos e isso não vai mudar. Estamos nesse mundo para fazer os melhores produtos do mundo e deixar o mundo melhor do que o encontramos.",
-    "Ouvir e relaciona de maneira amigável com o cliente pra tornar tudo amigável, auxiliando no aprendi-zado. E sempre prezando por respeito e trasparência."
-  ];
+function aumentarAltura(idDiv) {
+  var divSelecionada = document.getElementById(idDiv);
+  var divs = document.querySelectorAll('.olho_da_empresa');
+  var titulo = document.getElementById('titulo');
 
-  var titulos = ["Missão", "Visão", "Valores"];
+  // Fecha todas as outras divs e verifica se pelo menos uma está aberta
+  var algumaAberta = false;
+  divs.forEach(function(div) {
+      if (div !== divSelecionada) {
+          div.style.height = '100px'; // Altura original
+          if (div.style.height === '400px') {
+              algumaAberta = true;
+          }
+      }
+  });
 
-  var indiceAtual = 0;
+  // Alterna a altura da div selecionada
+  if (divSelecionada.style.height !== '400px') {
+      divSelecionada.style.height = '400px'; // Abre a div selecionada
+      algumaAberta = true;
+  } else {
+      divSelecionada.style.height = '100px'; // Fecha a div selecionada
+  }
 
-  function mudarTextoETitulo() {
-    
-    document.getElementById("textoMudavel").style.opacity = 0;
-    document.getElementById("mudarTitulo").style.opacity = 0;
-
-    setTimeout(function() {
-      
-      document.getElementById("textoMudavel").textContent = textos[indiceAtual];
-      document.getElementById("mudarTitulo").textContent = titulos[indiceAtual];
-
-      
-
-      
-      indiceAtual = (indiceAtual + 1) % textos.length;
-
-      
-      document.getElementById("textoMudavel").style.opacity = 1;
-      document.getElementById("mudarTitulo").style.opacity = 1;
-    }, 500); // 500ms = tempo da transição
-  }  
-mudarTextoETitulo();
-setInterval(mudarTextoETitulo, 3000);  
-
+  // Oculta ou exibe o título conforme o estado das divs
+  titulo.style.display = algumaAberta ? 'none' : 'block';
+}
 
 let count = 1;
 document.getElementById("slide1").checked = true;
 
 setInterval(function(){
-    nextImage();
+  nextImage();
 }, 2000) 
 
 function nextImage(){
@@ -70,7 +64,7 @@ var swiper = new Swiper(".slide-content", {
   },
   breakpoints: { // Correção: 'breakpoint' deve ser 'breakpoints'
     0: {
-      slidesPerView: 2,
+      slidesPerView: 1,
     },
     1200: {
       slidesPerView: 3,
