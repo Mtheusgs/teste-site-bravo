@@ -101,7 +101,8 @@ a:hover{
     display: flex;  
     flex-direction: row;  
     justify-content: center ; 
-    gap: 100px; 
+    gap: 100px;  
+    height: 850px;
     
 
 } 
@@ -632,7 +633,6 @@ input{
 
     .duas_partes{
         flex-direction: row; 
-        align-items: center; 
         gap: 80px; 
         padding: 60px; 
         height: 800px;
@@ -648,9 +648,12 @@ input{
     }
     .overlay::after{
         top: 200px; 
-    } 
+    }  
+    
     
 }
+
+
 
 
 @media (max-width: 1400px) {
@@ -679,7 +682,7 @@ input{
         flex-direction: column; 
         gap: 100px; 
         padding:200px; 
-        height: 1200px;  
+        height: 1600px;  
         padding-top: 400px ; 
 
         
@@ -689,10 +692,6 @@ input{
         display: flex;
         flex-direction: row;
     }
-    .parte2{
-       position: relative;  
-       top: -20px;
-    } 
     .final{
         padding-left: 60px;
     }
@@ -736,7 +735,17 @@ input{
     } 
     .final{
         padding-top: 20px;
-    }
+    } 
+    .parte2{
+        position: relative; 
+        left: -5px; 
+    } 
+    .mapBox{
+        width: 40%;  
+        height: 448;
+
+    } 
+    
     
 }
 
