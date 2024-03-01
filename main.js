@@ -8,15 +8,15 @@ function aumentarAltura(idDiv) {
   divs.forEach(function(div) {
       if (div !== divSelecionada) {
           div.style.height = '100px'; // Altura original
-          if (div.style.height === '400px') {
+          if (div.style.height === '360px') {
               algumaAberta = true;
           }
       }
   });
 
   // Alterna a altura da div selecionada
-  if (divSelecionada.style.height !== '400px') {
-      divSelecionada.style.height = '400px'; // Abre a div selecionada
+  if (divSelecionada.style.height !== '360px') {
+      divSelecionada.style.height = '360px'; // Abre a div selecionada
       algumaAberta = true;
   } else {
       divSelecionada.style.height = '100px'; // Fecha a div selecionada
@@ -25,6 +25,10 @@ function aumentarAltura(idDiv) {
   // Oculta ou exibe o título conforme o estado das divs
   titulo.style.display = algumaAberta ? 'none' : 'block';
 }
+
+
+
+
 
 let count = 1;
 document.getElementById("slide1").checked = true;
