@@ -184,7 +184,8 @@ p{
 .textoMudavel,#mudarTitulo{
     opacity: 1;
     transition: opacity 0.5s ease; 
-    text-align: justify;  
+    text-align: justify;   
+
     
 } 
 
@@ -192,7 +193,8 @@ p{
     padding: 10px; 
     text-align: justify;
     word-break: break-all; 
-    word-break: break-word; 
+    word-break: break-word;  
+    font-size: 1.28rem;
     
 }
 
