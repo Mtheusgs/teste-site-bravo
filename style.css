@@ -651,8 +651,35 @@ input{
     .overlay::after{
         top: 200px; 
     }  
+    .duas_partes{
+        flex-direction: column; 
+        gap: 150px; 
+        padding:200px; 
+        height: 1350px;  
+        padding-top: 275px ; 
+
+        
+    } 
+    .org{
+        gap: 40px;
+        display: flex;
+        flex-direction: row;
+    }
+    .parte2{
+        position: relative; 
+        left: 300px; 
+    } 
+    .mapBox{
+        width: 40%;  
+        height: 448;
+
+    }   
     
-    
+    .part1{
+        position: relative;
+        right: -200px;
+    }
+
 }
 
 
