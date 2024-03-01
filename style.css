@@ -659,7 +659,7 @@ input{
         padding-top: 275px ; 
 
         
-    } 
+    }  
     .org{
         gap: 40px;
         display: flex;
@@ -667,18 +667,15 @@ input{
     }
     .parte2{
         position: relative; 
-        left: 300px; 
+        left: 300px;  
+        width: 650px;
     } 
     .mapBox{
         width: 40%;  
         height: 448;
 
-    }   
+    }    
     
-    .part1{
-        position: relative;
-        right: -200px;
-    }
 
 }
 
